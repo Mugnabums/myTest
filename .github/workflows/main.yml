@@ -24,5 +24,11 @@ jobs:
     - name: Build the application
       run: g++ -o Structures Beispiel_Struct.cpp
 
+    - name: Build the tests
+      run: g++ -o tests test.cpp
+
     - name: Run the application
       run: ./Structures
+
+    - name: Run the tests
+      run: ./tests && echo "All tests passed!"
