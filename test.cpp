@@ -2,7 +2,7 @@
 #include <iostream>
 
 int sum(int a, int b) {
-    return a + c;
+    return a + b;
 }
 
 int main() {
