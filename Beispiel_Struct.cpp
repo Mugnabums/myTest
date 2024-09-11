@@ -26,5 +26,5 @@ feld XY = move ({1, 2}, himmelsrichtung::nord, true);
     std::cout << XY.x << '\n';
     std::cout << XY.y << '\n';
 
-    return 0;
+    return 0
 }
