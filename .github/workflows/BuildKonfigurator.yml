@@ -1,6 +1,6 @@
 # .github/workflows/cpp-ci.yml
 
-name: C++ CI
+name: Konfigurator
 
 on:
   push:
