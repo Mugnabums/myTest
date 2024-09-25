@@ -22,28 +22,22 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y g++
 
     - name: Build the application
-      run: g++ Beispiel_Struct.cpp -o Structures
-
-    #- name: Build the tests
-    #  run: g++ test.cpp -o tests
+      run: g++ Konfigurator.cpp -o fahrzeugkonfig
 
     - name: Run the application
-      run: ./Structures
+      run: ./fahrzeugkonfig
       
     #- name: Run clang-tidy
     #  run: clang-tidy main.cpp -- -std=c++17
       
     - name: Zip the executable
-      run: zip setup.zip Structures
+      run: zip setup.zip fahrzeugkonfig
       
     - name: Upload build artifact
       uses: actions/upload-artifact@v3
       with:
         name: setup-zip
         path: ./setup.zip
-        
-    #- name: Run the tests
-    #  run: ./tests && echo "All tests passed!"
         
   release:
     needs: build
